@@ -20,10 +20,11 @@ sleep(duration)
 camera.stop_recording()
 
 
-subprocess.run(["scp", video_name, "markgoodrich@192.168.0.100:/home/markgoodrich/Videos/Pi_Videos/"])
+
+#subprocess.run(["scp", video_name, "markgoodrich@192.168.0.100:/home/markgoodrich/Videos/Pi_Videos/"])
 
 
-if os.path.exists(video_name):
-	os.remove(video_name)
-else:
-	print("File does not exist")
+#if os.path.exists(video_name):
+#	os.remove(video_name)
+#else:
+#	print("File does not exist")

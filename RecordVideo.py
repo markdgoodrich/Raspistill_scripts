@@ -15,6 +15,7 @@ else:
 	path = "/home/pi/Videos/" + datetime.now().strftime('%Y%m%d_%H:%M')
 
 duration = int(input("How long to film (in seconds): "))
+camera.start_preview()
 
 video_name = path + '.h264' 
 
@@ -23,7 +24,7 @@ video_name = path + '.h264'
 camera.start_recording(video_name)
 sleep(duration)
 camera.stop_recording()
-
+camera.stop_preview()
 print("Video recording finished.")
 
 #subprocess.run(["scp", video_name, "markgoodrich@192.168.0.100:/home/markgoodrich/Videos/Pi_Videos/"])

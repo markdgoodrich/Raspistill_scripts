@@ -14,17 +14,23 @@ if usb_answer.upper() == "Y":
 else:
 	path = "/home/pi/Videos/" + datetime.now().strftime('%Y%m%d_%H:%M')
 
+duration = int(input("How long to film (in seconds): "))
+camera.start_preview()
+
 video_name = path + '.h264' 
 
+#print(video_name)
 
-camera.start_preview()
 camera.start_recording(video_name)
-
-print("Recording has begun!")
-enter = input("	Hit ENTER to end recording.")
-if enter == '':
-	camera.stop_recording()
-	camera.stop_preview()
+sleep(duration)
+camera.stop_recording()
+camera.stop_preview()
 print("Video recording finished.")
 
+#subprocess.run(["scp", video_name, "markgoodrich@192.168.0.100:/home/markgoodrich/Videos/Pi_Videos/"])
 
+
+#if os.path.exists(video_name):
+#	os.remove(video_name)
+#else:
+#	print("File does not exist")

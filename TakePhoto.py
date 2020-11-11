@@ -7,7 +7,7 @@ from picamera import PiCamera
 #add it to/var/www/html/
 
 camera = PiCamera()
-camera.resolution = (2592,1944)
+camera.resolution = (4056,3040)
 path = "/var/www/html/" + datetime.now().strftime('%Y%m%d')
 
 #check to see fi directory arleady exists

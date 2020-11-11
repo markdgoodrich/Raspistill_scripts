@@ -5,7 +5,7 @@ import time
 
 
 camera = PiCamera()
-camera.resolution = (2592,1944)
+camera.resolution = (4056,3040)
 
 camera.start_preview()
 time.sleep(15)

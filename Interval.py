@@ -8,7 +8,7 @@ import time
 #add it to/var/www/html/
 
 camera = PiCamera()
-camera.resolution = (2592,1944)
+camera.resolution = (4056,3040)
 path = "/var/www/html/Interval_" + datetime.now().strftime('%Y%m%d') + "_" + datetime.now().strftime('%H:%M')
 
 #check to see fi directory arleady exists

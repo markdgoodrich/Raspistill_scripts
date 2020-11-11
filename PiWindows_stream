@@ -1,0 +1,17 @@
+1) Install VLC on Windows machine [https://www.videolan.org/vlc/download-windows.html]
+2) Plug in the Pi and its display
+	2a) run an ethernet cord from the Pi to the Windows Machine
+3) On the Pi: Open up the Terminal app
+4) From the terminal, type "ifconfig" then hit "Enter"
+	4a) under the "eth0" output, you should see an ethernet number like 10.42.0.1.  Write down this number
+
+5) Copy-paste this into the terminal, then hit "Enter": 
+raspivid -o - -t 0 -hf -w 1280 -h 720 -fps 25 | cvlc -vvv stream:///dev/stdin --sout '#rtp{sdp=rtsp://:8554/x}' :demux=h264
+
+This is also saved on the Desktop as "ForZac_CopyThis" for a quick copy & paste.
+
+6) Go back to the Windows machine and open VLC.
+7) Go to Media > Open Network Stream (Ctrl + N)
+8) For the Network URL, type in "rtsp://[number_from_ifconfig]:8554/x"
+
+9) The stream should be visible! 

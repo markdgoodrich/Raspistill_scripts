@@ -29,7 +29,7 @@ picture_name = path + '/%s.jpg' %pic_num
 button = input("Hit 'Enter' to take a photo!")
 camera.start_preview()
 
-while true:
+while True:
     if button == '':
         camera.capture(picture_name)
         pic_num += 1

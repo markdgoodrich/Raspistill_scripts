@@ -26,6 +26,8 @@ picture_name = path + '/%s.jpg' %pic_num
 #Press 'enter' to take picture
 #   Path should be 
 
+#can change this to a button if need be.
+#b=Button(14)
 button = input("Hit 'Enter' to take a photo!")
 camera.start_preview()
 
@@ -35,3 +37,4 @@ while True:
         pic_num += 1
         picture_name = path + '/%s.jpg' %pic_num
         print('Picture taken!\n')
+        time.sleep(1)

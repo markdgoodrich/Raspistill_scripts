@@ -33,3 +33,5 @@ while true:
     if button == '':
         camera.capture(picture_name)
         pic_num += 1
+	picture_name = path + '/%s.jpg' %pic_num
+	print('Picture taken!\n')

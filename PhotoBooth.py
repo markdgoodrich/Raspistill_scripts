@@ -1,6 +1,7 @@
 from datetime import datetime
 import os
 from picamera import PiCamera
+import time
 
 #Take a photo
 #name it
@@ -28,13 +29,25 @@ picture_name = path + '/%s.jpg' %pic_num
 
 #can change this to a button if need be.
 #b=Button(14)
-button = input("Hit 'Enter' to take a photo!")
-camera.start_preview()
+#button = input("Hit 'Enter' to take a photo!")
 
 while True:
+    #can change this to a button if need be.
+    #b=Button(14)
+    button = input("Hit 'Enter' to take a photo!")
     if button == '':
+        print(' 3')
+        time.sleep(1)
+        print(' 2')
+        time.sleep(1)
+        print(' 1')
+        time.sleep(1)
+        camera.start_preview()
+        time.sleep(2)
         camera.capture(picture_name)
         pic_num += 1
         picture_name = path + '/%s.jpg' %pic_num
         print('Picture taken!\n')
         time.sleep(1)
+        camera.stop_preview()
+        

@@ -1,4 +1,4 @@
-# Pi_Photography 
+# Pi Photography 
 -------------
 
 A simple collection of python scripts for photography and video recording projects.

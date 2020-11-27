@@ -49,7 +49,7 @@ sudo apt install apache2 -y
 
 The apache directory '/var/www/html' should now be present.  
 
-Any users on the network can type in  * http://[IP Address of the Pi] * into their browsers to see your photographs.
+Any users on the network can type in  http://[IP_Address_of_the_Pi] into their browsers to see your photographs.
 
 
 

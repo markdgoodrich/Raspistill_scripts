@@ -16,7 +16,7 @@ When recording videos, the programs will ask if the user is using an external US
 ## Scripts
 * DurationRecord.py - Records a video of a certain length, given in seconds.
 * Interval.py - Takes a photo at a certain interval for a specified duration, set by the user.
-* ManualPhoto.py - Allows the user precise control over the camera settings, including ISO, Shutter Speed, and White Balance.  All photographs are exported with raw data.
+* ManualPhoto.py - Allows the user precise control over the camera settings for a single photograph.  Adjsutable options including ISO, Shutter Speed, and White Balance.  All photographs are exported with raw data.
 * PhotoBooth.py - A photobooth-style application that runs constantly; it will provide a preview and snap a picture when the button is pressed.
 * Preview.py - Displays the current camera view for 15 seconds.  No video or photograph is recorded.  Useful for getting objects in focus.
 * RecordVideo.py - Records a video until the user tells it to stop.

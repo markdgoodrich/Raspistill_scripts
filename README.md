@@ -10,7 +10,7 @@ Video resolution is set at 1920x1080.
 
 All photos are saved to the Apache Web server default directory.  This allows users on the same network to view the photos easily.  Instructions on how to install Apache are below.
 
-When recording videos, the programs will ask if the user is using an external USB.  If 'No', then the videos are saved to the default Video direction '/home/pi/Videos/'.  If "Yes", you will need to enter the name of the USB device.
+When recording videos, the programs will ask if the user is using an external USB.  If 'No', then the videos are saved to the default Video directory '/home/pi/Videos/'.  If "Yes", you will be prompted to enter the name of the USB device and videos will be saved there.
 
 
 ## Scripts
@@ -47,7 +47,9 @@ Then install Apache with this:
 sudo apt install apache2 -y
 ```
 
-The apache directory '/var/www/html' should now be present.  Any users on the network can type in the IP Address of the Pi into their browsers to see your photographs.
+The apache directory '/var/www/html' should now be present.  
+
+Any users on the network can type in  * http://[IP Address of the Pi] * into their browsers to see your photographs.
 
 
 

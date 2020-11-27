@@ -42,14 +42,14 @@ else:
     ss = int(ss_input)*10**6 #Converts time to microseconds
 
 wb_options = ['off', 'auto', 'sun', 'clod', 'shade', 'tungsten', 'fluorescent', 'incandescent', 'flash', 'horizon']
-wb_input = input('Pick your White Balance.  Press "Enter" to default to off.  Press "H" to see options: ')
+wb_input = input('Pick your White Balance.  Press "Enter" to default to auto.  Press "H" to see options: ')
 if wb_input.upper() == 'H':
     print(wb_options)
-    wb_input = input('Pick your White Balance.  Press "Enter" to default to off.  Press "H" to see options: ')
+    wb = input('Pick your White Balance.  Press "Enter" to default to auto: ')
 elif wb_input.lower() in wb_options:
     wb = wb_input.lower()
 elif wb_input == '':
-    wb = "off"
+    wb = "auto"
 else:
     print("Invalid selection. Press 'H' to see options, or 'Enter' to default to no white balance.")
 

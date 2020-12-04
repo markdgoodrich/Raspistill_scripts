@@ -10,7 +10,7 @@ camera.resolution = (1920, 1080)
 usb_answer = input("Is the external USB inserted? [Y/n]: ")
 if usb_answer.upper() == "Y":
         usb_name = input("Enter the name of the USB device: ")
-	path = "/media/pi/" + usb_name + "/" + datetime.now().strftime('%Y%m%d_%H:%M')	
+	path = "/media/pi/" + usb_name + "/" + datetime.now().strftime('%Y%m%d_%H%M')	
 else:
 	path = "/home/pi/Videos/" + datetime.now().strftime('%Y%m%d_%H:%M')
 
